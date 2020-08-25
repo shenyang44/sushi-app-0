@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { Route, Link, useHistory } from 'react-router-dom';
+import { Route, useHistory } from 'react-router-dom';
 import Team from './pages/team';
 import Landing from './pages/landing';
 import About from './pages/about';
@@ -19,7 +19,6 @@ function App() {
       }
     })
       .then(result => {
-        console.log(result)
         setPlayers(result.data.data)
       })
       .catch(err => {

@@ -9,7 +9,6 @@ const Team = ({ teamSelect }) => {
     useEffect(() => {
         axios.get("https://www.balldontlie.io/api/v1/teams")
             .then(result => {
-                console.log(result)
                 setCharacters(result.data.data)
                 setIsLoading(false)
             })
@@ -38,7 +37,6 @@ const Team = ({ teamSelect }) => {
                 </div>
             </>)
     )
-
 }
 
 export default Team;
